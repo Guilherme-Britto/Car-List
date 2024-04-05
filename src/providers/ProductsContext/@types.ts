@@ -24,4 +24,6 @@ export interface IProductContext {
   productsCreate: (formData: IProduct) => void;
   creatingProductModal: boolean;
   SetCreatingProductModal: React.Dispatch<React.SetStateAction<boolean>>;
+  activeBrand: boolean;
+  SetActiveBrand: React.Dispatch<React.SetStateAction<boolean>>;
 }

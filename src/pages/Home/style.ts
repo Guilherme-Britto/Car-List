@@ -37,6 +37,10 @@ export const ProductInfo = styled.main`
       border-radius: 4px;
 
       font-size: 1.5rem;
+
+      &:hover {
+        background-color: var(--Grey2);
+      }
     }
   }
 `;

@@ -19,5 +19,11 @@ export const Ul = styled.ul`
   img {
     height: 200px;
     width: 200px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 `;

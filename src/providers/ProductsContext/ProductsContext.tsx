@@ -6,6 +6,7 @@ export const ProductsContext = createContext({} as IProductContext);
 
 export const ProductsProvider = ({ children }: IDefaultProviderProps) => {
   const [products, SetProducts] = useState<any>([]);
+  const [activeBrand, SetActiveBrand] = useState(false);
   const [creatingProductModal, SetCreatingProductModal] = useState(false);
 
   const productsList = async () => {
@@ -32,6 +33,8 @@ export const ProductsProvider = ({ children }: IDefaultProviderProps) => {
         products,
         creatingProductModal,
         SetCreatingProductModal,
+        activeBrand,
+        SetActiveBrand,
       }}
     >
       {children}

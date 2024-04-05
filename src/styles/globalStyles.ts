@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalReset = createGlobalStyle`
-    /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html,
 body,
 div,
@@ -143,7 +139,6 @@ button {
 `;
 
 export const GlobalStyle = createGlobalStyle`
-
     body{
         background-color: var(--Grey4);
         color: var(--WhiteFixed);
@@ -230,6 +225,4 @@ export const GlobalStyle = createGlobalStyle`
         --Grey4: #121214;
         --BlackFixed: #000000;
     }
-
-
 `;

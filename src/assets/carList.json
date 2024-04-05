@@ -10,7 +10,7 @@
       "cor": "BEGE",
       "nome_modelo": "ONIX PLUS",
       "valor": 50.0,
-      "brand": "chevrolet"
+      "brand": 2
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "cor": "AZUL",
       "nome_modelo": "JETTA",
       "valor": 49.0,
-      "brand": "Volkswagen"
+      "brand": 3
     },
     {
       "id": 3,
@@ -34,31 +34,7 @@
       "cor": "AZUL",
       "nome_modelo": "HILLUX SW4",
       "valor": 47.5,
-      "brand": "Toyota"
-    },
-    {
-      "id": 55,
-      "timestamp_cadastro": 1696549488,
-      "modelo_id": 88,
-      "ano": 2014,
-      "combustivel": "FLEX",
-      "num_portas": 4,
-      "cor": "BRANCA",
-      "nome_modelo": "ETIOS",
-      "valor": 36.0,
-      "brand": "Toyota"
-    },
-    {
-      "id": 23,
-      "timestamp_cadastro": 1696531236,
-      "modelo_id": 77,
-      "ano": 2014,
-      "combustivel": "FLEX",
-      "num_portas": 4,
-      "cor": "PRETO",
-      "nome_modelo": "COROLLA",
-      "valor": 120.0,
-      "brand": "Toyota"
+      "brand": 1
     },
     {
       "id": 6,
@@ -70,7 +46,7 @@
       "cor": "PRATA",
       "nome_modelo": "SPIN",
       "valor": 60.0,
-      "brand": "chevrolet"
+      "brand": 2
     },
     {
       "id": 7,
@@ -82,7 +58,7 @@
       "cor": "VERMELHO",
       "nome_modelo": "GOL",
       "valor": 55.0,
-      "brand": "Volkswagen"
+      "brand": 3
     },
     {
       "id": 8,
@@ -94,7 +70,7 @@
       "cor": "PRETO",
       "nome_modelo": "YARIS",
       "valor": 70.0,
-      "brand": "Toyota"
+      "brand": 1
     },
     {
       "id": 9,
@@ -106,7 +82,7 @@
       "cor": "CINZA",
       "nome_modelo": "RAV4",
       "valor": 45.0,
-      "brand": "Toyota"
+      "brand": 1
     },
     {
       "id": 10,
@@ -118,7 +94,7 @@
       "cor": "BRANCA",
       "nome_modelo": "CAMRY",
       "valor": 125.0,
-      "brand": "Toyota"
+      "brand": 1
     },
     {
       "id": 11,
@@ -130,7 +106,7 @@
       "cor": "AZUL",
       "nome_modelo": "SEQUOIA",
       "valor": 130.0,
-      "brand": "Toyota"
+      "brand": 1
     },
     {
       "id": 12,
@@ -142,7 +118,7 @@
       "cor": "VERMELHO",
       "nome_modelo": "Fiesta",
       "valor": 40.0,
-      "brand": "Ford"
+      "brand": 4
     },
     {
       "id": 13,
@@ -154,7 +130,7 @@
       "cor": "PRETO",
       "nome_modelo": "Ranger",
       "valor": 75.0,
-      "brand": "Ford"
+      "brand": 4
     },
     {
       "id": 14,
@@ -166,7 +142,7 @@
       "cor": "AZUL",
       "nome_modelo": "EcoSport",
       "valor": 55.0,
-      "brand": "Ford"
+      "brand": 4
     },
     {
       "id": 15,
@@ -178,7 +154,7 @@
       "cor": "PRATA",
       "nome_modelo": "Ka",
       "valor": 45.0,
-      "brand": "Ford"
+      "brand": 4
     },
     {
       "id": 16,
@@ -190,19 +166,19 @@
       "cor": "BRANCO",
       "nome_modelo": "Focus",
       "valor": 65.0,
-      "brand": "Ford"
+      "brand": 4
     },
     {
       "id": 17,
       "timestamp_cadastro": 1696539655,
       "modelo_id": 101,
       "ano": 2021,
-      "combustivel": "HÍBRIDO",
+      "combustivel": "FLEX",
       "num_portas": 4,
       "cor": "VERDE",
       "nome_modelo": "Mustang",
       "valor": 100.0,
-      "brand": "Ford"
+      "brand": 4
     },
     {
       "id": 18,
@@ -214,7 +190,31 @@
       "cor": "CINZA",
       "nome_modelo": "Mach-E",
       "valor": 110.0,
-      "brand": "Ford"
+      "brand": 4
+    },
+    {
+      "id": 23,
+      "timestamp_cadastro": 1696531236,
+      "modelo_id": 77,
+      "ano": 2014,
+      "combustivel": "FLEX",
+      "num_portas": 4,
+      "cor": "PRETO",
+      "nome_modelo": "COROLLA",
+      "valor": 120.0,
+      "brand": 1
+    },
+    {
+      "id": 55,
+      "timestamp_cadastro": 1696549488,
+      "modelo_id": 88,
+      "ano": 2014,
+      "combustivel": "FLEX",
+      "num_portas": 4,
+      "cor": "BRANCA",
+      "nome_modelo": "ETIOS",
+      "valor": 36.0,
+      "brand": 1
     }
   ]
 }
