@@ -13,7 +13,7 @@ export const ProductsList = () => {
       ) : (
         <Ul>
           {products.map((product) => (
-            <ProductsCard key={product.code} product={product} />
+            <ProductsCard key={product.id} product={product} />
           ))}
         </Ul>
       )}

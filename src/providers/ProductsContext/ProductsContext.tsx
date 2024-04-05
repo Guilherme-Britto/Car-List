@@ -1,5 +1,7 @@
 import { createContext, useEffect, useState } from 'react';
 import { IProductContext, IProduct, IDefaultProviderProps } from './@types';
+import data from '../../assets/carList.json';
+
 export const ProductsContext = createContext({} as IProductContext);
 
 export const ProductsProvider = ({ children }: IDefaultProviderProps) => {
@@ -7,13 +9,16 @@ export const ProductsProvider = ({ children }: IDefaultProviderProps) => {
   const [creatingProductModal, SetCreatingProductModal] = useState(false);
 
   const productsList = async () => {
+    console.log(data.cars);
+
     SetCreatingProductModal(false);
-    SetProducts(carList);
+    SetProducts(data.cars);
   };
 
   const productsCreate = (formData: IProduct) => {
     SetCreatingProductModal(false);
     SetProducts([...products, formData]);
+    console.log(products);
   };
 
   useEffect(() => {

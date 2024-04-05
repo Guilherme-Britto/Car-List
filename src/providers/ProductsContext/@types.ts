@@ -3,20 +3,20 @@ export interface IDefaultProviderProps {
 }
 
 export interface IProduct {
-  code: string;
-  description: string;
-  price: string;
-  created_at: Date;
+  id: number;
+  timestamp_cadastro: number;
+  modelo_id: number;
+  ano: number;
+  combustivel: string;
+  num_portas: number;
+  cor: string;
+  nome_modelo: string;
+  valor: number;
 }
 
 export type ICreateProductFormValues = Omit<
   IProduct,
-  'code' | 'created_at' | 'updated_at'
->;
-
-export type IUpdateProductFormValues = Omit<
-  IProduct,
-  'code' | 'created_at' | 'updated_at'
+  'id' | 'timestamp_cadastro'
 >;
 
 export interface IProductContext {
