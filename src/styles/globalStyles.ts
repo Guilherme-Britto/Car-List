@@ -167,13 +167,17 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
         margin: 0 14px;
-        margin-top: 22px;
+        margin-top: .5rem;
     }
 
     .spanError{
         color: var(--Error);
         font-size: .75rem;
         padding-top: 5px;
+    }
+
+    .colorPrimaryFocus{
+        color: var(--Color-primary-Focus);
     }
 
     .colorWhiteFixed{
@@ -213,9 +217,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     :root {
-        --Color-primary: #FF577F;
-        --Color-primary-Focus: #FF427F;
-        --Color-primary-Negative: #59323F;
+        --Color-primary: #0B82DB;
+        --Color-primary-Focus: #4c9dd9;
         --Error: #eb0e33;
         --WhiteFixed: #ffffff;
         --Grey0: #F8F9FA;

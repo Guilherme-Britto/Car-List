@@ -5,9 +5,11 @@ import data from '../../assets/carList.json';
 export const ProductsContext = createContext({} as IProductContext);
 
 export const ProductsProvider = ({ children }: IDefaultProviderProps) => {
-  const [products, SetProducts] = useState<any>([]);
-  const [activeBrand, SetActiveBrand] = useState(false);
+  const [products, SetProducts] = useState<IProduct[]>([]);
+  const [activeBrand, SetActiveBrand] = useState(0);
   const [creatingProductModal, SetCreatingProductModal] = useState(false);
+  const [expandInfoModal, SetExpandInfoModal] = useState(false);
+  const [expandInfo, SetExpandInfo] = useState<IProduct>();
 
   const productsList = async () => {
     console.log(data.cars);
@@ -35,6 +37,10 @@ export const ProductsProvider = ({ children }: IDefaultProviderProps) => {
         SetCreatingProductModal,
         activeBrand,
         SetActiveBrand,
+        expandInfoModal,
+        SetExpandInfoModal,
+        expandInfo,
+        SetExpandInfo,
       }}
     >
       {children}

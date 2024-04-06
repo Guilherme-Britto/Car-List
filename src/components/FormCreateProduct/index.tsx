@@ -8,11 +8,7 @@ import { ICreateProductFormValues } from '../../providers/ProductsContext/@types
 import { useOutclick } from '../../hooks/useOutclick';
 
 export const FormCreateProduct = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<ICreateProductFormValues>();
+  const { register, handleSubmit } = useForm<ICreateProductFormValues>();
 
   const { productsCreate, SetCreatingProductModal } =
     useContext(ProductsContext);
@@ -38,16 +34,52 @@ export const FormCreateProduct = () => {
         </button>
       </div>
       <Input
-        id={'description'}
-        placeholder={'Descrição...'}
-        label={'Descrição:'}
-        {...register('description')}
+        id={'nome'}
+        placeholder={'Nome...'}
+        label={'Nome:'}
+        {...register('nome_modelo')}
       />
       <Input
-        id={'price'}
-        placeholder={'Digite o preço aqui.'}
-        label={'Preço:'}
-        {...register('price')}
+        id={'ano'}
+        placeholder={'Ano...'}
+        label={'Ano:'}
+        {...register('ano')}
+      />
+      <Input
+        id={'modelo'}
+        placeholder={'Modelo...'}
+        label={'Modelo:'}
+        {...register('modelo_id')}
+      />
+      <Input
+        id={'combustivel'}
+        placeholder={'Combustível...'}
+        label={'Combustível:'}
+        {...register('combustivel')}
+      />
+      <Input
+        id={'brand'}
+        placeholder={'Marca...'}
+        label={'Marca:'}
+        {...register('brand')}
+      />
+      <Input
+        id={'num_portas'}
+        placeholder={'Número de portas...'}
+        label={'Número de portas:'}
+        {...register('num_portas')}
+      />
+      <Input
+        id={'modelo_id'}
+        placeholder={'Número de modelo...'}
+        label={'Número de modelo:'}
+        {...register('modelo_id')}
+      />
+      <Input
+        id={'valor'}
+        placeholder={'Valor...'}
+        label={'Valor:'}
+        {...register('valor')}
       />
 
       <SubmitButton className='submitButtonCreate' type='submit'>

@@ -8,6 +8,7 @@ export const HomeMain = styled.main`
 
   h1 {
     font-size: 2rem;
+    color: var(--Color-primary);
   }
 `;
 
@@ -40,6 +41,13 @@ export const ProductInfo = styled.main`
 
       &:hover {
         background-color: var(--Grey2);
+      }
+    }
+    span {
+      cursor: pointer;
+
+      &:hover {
+        color: var(--Grey1);
       }
     }
   }

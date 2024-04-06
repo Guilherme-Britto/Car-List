@@ -5,10 +5,17 @@ import { ProductsContext } from '../../providers/ProductsContext/ProductsContext
 import { ProductsList } from '../../components/ProductsList';
 import { Modal } from '../../styles/styles';
 import { BrandList } from '../../components/BrandList';
+import { ExpandProductInfo } from '../../components/ExpandInfoProduct';
 
 const Home = () => {
-  const { creatingProductModal, SetCreatingProductModal } =
-    useContext(ProductsContext);
+  const {
+    creatingProductModal,
+    SetCreatingProductModal,
+    expandInfoModal,
+    SetExpandInfoModal,
+    activeBrand,
+    SetActiveBrand,
+  } = useContext(ProductsContext);
 
   return (
     <HomeMain>
@@ -17,18 +24,30 @@ const Home = () => {
       </header>
       <ProductInfo>
         <section className='productInfoHeader'>
-          <h2 className='colorgrey0 weigth700'>Marcas</h2>
+          {activeBrand === 0 ? (
+            <h2 className='colorgrey0 weigth700'>Marcas</h2>
+          ) : (
+            <span onClick={() => SetActiveBrand(0)}>Voltar para Marcas</span>
+          )}
+
           <button
             className='colorgrey0 weigth700'
-            onClick={() => SetCreatingProductModal(true)}
+            onClick={() => {
+              SetCreatingProductModal(true), SetExpandInfoModal(false);
+            }}
           >
             +
           </button>
         </section>
-        <BrandList />
+        {activeBrand === 0 ? <BrandList /> : <ProductsList />}
         <Modal>
           <div className='modalDiv'>
             {creatingProductModal && <FormCreateProduct />}
+          </div>
+        </Modal>
+        <Modal>
+          <div className='modalDiv'>
+            {expandInfoModal && <ExpandProductInfo />}
           </div>
         </Modal>
       </ProductInfo>

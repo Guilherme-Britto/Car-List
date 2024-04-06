@@ -60,7 +60,7 @@ export const Ul = styled.ul`
 `;
 export const Modal = styled.div`
   position: fixed;
-  top: 148px;
+  top: 50px;
 
   display: flex;
   justify-content: center;
@@ -95,7 +95,7 @@ export const Modal = styled.div`
     }
 
     .submitButtonCreate {
-      margin: 20px 14px;
+      margin: 20px 14px 0 14px;
     }
 
     label {
@@ -143,6 +143,7 @@ export const Modal = styled.div`
 
     form {
       border-radius: 4px;
+      padding-bottom: 20px;
     }
 
     @media (min-width: 389px) {

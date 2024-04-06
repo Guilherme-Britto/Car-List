@@ -4,15 +4,17 @@ import { ProductsCard } from './ProductsCard';
 import { ProductsContext } from '../../providers/ProductsContext/ProductsContext';
 
 export const ProductsList = () => {
-  const { products } = useContext(ProductsContext);
-  products.map;
+  const { products, activeBrand } = useContext(ProductsContext);
+  const filteredProducts = products.filter(
+    (product) => product.brand === activeBrand
+  );
   return (
     <>
       {products.length == 0 ? (
         <p>Nenhum produto adicíonado.</p>
       ) : (
         <Ul>
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <ProductsCard key={product.id} product={product} />
           ))}
         </Ul>

@@ -7,22 +7,21 @@ interface IProductsCardProps {
 }
 
 export const ProductsCard = ({ product }: IProductsCardProps) => {
-  const {
-    SetUpdatingProduct,
-    SetUpdatingProductModal,
-    SetCreatingProductModal,
-  } = useContext(ProductsContext);
+  const { SetExpandInfoModal, SetExpandInfo, SetCreatingProductModal } =
+    useContext(ProductsContext);
 
   return (
     <li
       onClick={() => (
-        SetUpdatingProduct(product),
-        SetUpdatingProductModal(true),
+        SetExpandInfo(product),
+        SetExpandInfoModal(true),
         SetCreatingProductModal(false)
       )}
     >
-      <p className='colorgrey1'>{product.code}</p>
-      <h3>{product.description}</h3>
+      <p className='colorPrimaryFocus'>
+        {product.nome_modelo} - {product.ano}
+      </p>
+      <h3>{product.valor} mil </h3>
     </li>
   );
 };
