@@ -18,7 +18,7 @@ export const InputForm = styled.input`
   background-color: var(--Grey2);
   color: var(--Grey0);
 
-  height: 40px;
+  height: 32px;
 
   &:hover {
     border: 1px solid var(--Grey0);
@@ -60,7 +60,7 @@ export const Ul = styled.ul`
 `;
 export const Modal = styled.div`
   position: fixed;
-  top: 50px;
+  top: 70px;
 
   display: flex;
   justify-content: center;
@@ -95,7 +95,7 @@ export const Modal = styled.div`
     }
 
     .submitButtonCreate {
-      margin: 20px 14px 0 14px;
+      margin: 16px 14px 0 14px;
     }
 
     label {
@@ -123,27 +123,9 @@ export const Modal = styled.div`
       color: var(--Grey0);
     }
 
-    .buttons__container {
-      display: flex;
-      margin: 17px 14px 25px 14px;
-      gap: 17px;
-    }
-
-    .submitButtonUpdate {
-      width: 60%;
-    }
-
-    .removeButton {
-      width: 40%;
-      background-color: var(--Grey1);
-
-      height: 48px;
-      border-radius: 3.25px;
-    }
-
     form {
       border-radius: 4px;
-      padding-bottom: 20px;
+      padding-bottom: 8px;
     }
 
     @media (min-width: 389px) {
@@ -172,14 +154,6 @@ export const Modal = styled.div`
       }
 
       .submitButtonCreate {
-        font-size: 1rem;
-      }
-
-      .submitButtonUpdate {
-        font-size: 1rem;
-      }
-
-      .removeButton {
         font-size: 1rem;
       }
     }

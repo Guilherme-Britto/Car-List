@@ -1,5 +1,10 @@
 import { createContext, useEffect, useState } from 'react';
-import { IProductContext, IProduct, IDefaultProviderProps } from './@types';
+import {
+  IProductContext,
+  IProduct,
+  IDefaultProviderProps,
+  ICreateProductFormValues,
+} from './@types';
 import data from '../../assets/carList.json';
 
 export const ProductsContext = createContext({} as IProductContext);
@@ -18,9 +23,14 @@ export const ProductsProvider = ({ children }: IDefaultProviderProps) => {
     SetProducts(data.cars);
   };
 
-  const productsCreate = (formData: IProduct) => {
+  const productsCreate = (formData: ICreateProductFormValues) => {
     SetCreatingProductModal(false);
-    SetProducts([...products, formData]);
+    const updatedFormData = {
+      ...formData,
+      id: products[products.length - 1].id + 1,
+      timestamp_cadastro: Date.now(),
+    };
+    SetProducts([...products, updatedFormData]);
     console.log(products);
   };
 

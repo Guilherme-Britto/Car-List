@@ -167,13 +167,7 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
         margin: 0 14px;
-        margin-top: .5rem;
-    }
-
-    .spanError{
-        color: var(--Error);
-        font-size: .75rem;
-        padding-top: 5px;
+        margin-top: 10px;
     }
 
     .colorPrimaryFocus{

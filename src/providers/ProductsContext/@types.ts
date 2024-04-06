@@ -12,7 +12,7 @@ export interface IProduct {
   cor: string;
   nome_modelo: string;
   valor: number;
-  brand: number;
+  brand: number | string;
 }
 
 export type ICreateProductFormValues = Omit<
@@ -22,7 +22,7 @@ export type ICreateProductFormValues = Omit<
 
 export interface IProductContext {
   products: IProduct[];
-  productsCreate: (formData: IProduct) => void;
+  productsCreate: (formData: ICreateProductFormValues) => void;
   creatingProductModal: boolean;
   SetCreatingProductModal: React.Dispatch<React.SetStateAction<boolean>>;
   activeBrand: number;
