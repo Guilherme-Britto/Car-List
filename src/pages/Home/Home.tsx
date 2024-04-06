@@ -1,29 +1,29 @@
-import { HomeMain, ProductInfo } from './style';
+import { HomeMain, CarInfo } from './style';
 import { useContext } from 'react';
-import { FormCreateProduct } from '../../components/FormCreateProduct';
-import { ProductsContext } from '../../providers/ProductsContext/ProductsContext';
-import { ProductsList } from '../../components/ProductsList';
+import { FormCreateCar } from '../../components/FormCreateCar';
+import { CarsContext } from '../../providers/CarsContext/CarsContext';
+import { CarsList } from '../../components/CarsList';
 import { Modal } from '../../styles/styles';
 import { BrandList } from '../../components/BrandList';
-import { ExpandProductInfo } from '../../components/ExpandInfoProduct';
+import { ExpandCarInfo } from '../../components/ExpandInfoCar';
 
 const Home = () => {
   const {
-    creatingProductModal,
-    SetCreatingProductModal,
+    creatingCarModal,
+    SetCreatingCarModal,
     expandInfoModal,
     SetExpandInfoModal,
     activeBrand,
     SetActiveBrand,
-  } = useContext(ProductsContext);
+  } = useContext(CarsContext);
 
   return (
     <HomeMain>
       <header>
         <h1>Lista de Carros</h1>
       </header>
-      <ProductInfo>
-        <section className='productInfoHeader'>
+      <CarInfo>
+        <section className='carInfoHeader'>
           {activeBrand === 0 ? (
             <h2 className='colorgrey0 weigth700'>Marcas</h2>
           ) : (
@@ -33,24 +33,24 @@ const Home = () => {
           <button
             className='colorgrey0 weigth700'
             onClick={() => {
-              SetCreatingProductModal(true), SetExpandInfoModal(false);
+              SetCreatingCarModal(true), SetExpandInfoModal(false);
             }}
           >
             +
           </button>
         </section>
-        {activeBrand === 0 ? <BrandList /> : <ProductsList />}
+        {activeBrand === 0 ? <BrandList /> : <CarsList />}
         <Modal>
           <div className='modalDiv'>
-            {creatingProductModal && <FormCreateProduct />}
+            {creatingCarModal && <FormCreateCar />}
           </div>
         </Modal>
         <Modal>
           <div className='modalDiv'>
-            {expandInfoModal && <ExpandProductInfo />}
+            {expandInfoModal && <ExpandCarInfo />}
           </div>
         </Modal>
-      </ProductInfo>
+      </CarInfo>
     </HomeMain>
   );
 };

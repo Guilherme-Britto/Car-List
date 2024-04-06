@@ -2,7 +2,7 @@ export interface IDefaultProviderProps {
   children: React.ReactNode;
 }
 
-export interface IProduct {
+export interface ICar {
   id: number;
   timestamp_cadastro: number;
   modelo_id: number;
@@ -15,20 +15,17 @@ export interface IProduct {
   brand: number | string;
 }
 
-export type ICreateProductFormValues = Omit<
-  IProduct,
-  'id' | 'timestamp_cadastro'
->;
+export type ICreateCarFormValues = Omit<ICar, 'id' | 'timestamp_cadastro'>;
 
-export interface IProductContext {
-  products: IProduct[];
-  productsCreate: (formData: ICreateProductFormValues) => void;
-  creatingProductModal: boolean;
-  SetCreatingProductModal: React.Dispatch<React.SetStateAction<boolean>>;
+export interface ICarContext {
+  cars: ICar[];
+  carsCreate: (formData: ICreateCarFormValues) => void;
+  creatingCarModal: boolean;
+  SetCreatingCarModal: React.Dispatch<React.SetStateAction<boolean>>;
   activeBrand: number;
   SetActiveBrand: React.Dispatch<React.SetStateAction<number>>;
   expandInfoModal: boolean;
   SetExpandInfoModal: React.Dispatch<React.SetStateAction<boolean>>;
-  expandInfo: IProduct | undefined;
-  SetExpandInfo: React.Dispatch<React.SetStateAction<IProduct | undefined>>;
+  expandInfo: ICar | undefined;
+  SetExpandInfo: React.Dispatch<React.SetStateAction<ICar | undefined>>;
 }

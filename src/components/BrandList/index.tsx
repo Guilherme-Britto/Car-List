@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { Ul } from './style';
-import { ProductsContext } from '../../providers/ProductsContext/ProductsContext';
+import { CarsContext } from '../../providers/CarsContext/CarsContext';
 
 export const BrandList = () => {
-  const { SetActiveBrand } = useContext(ProductsContext);
+  const { SetActiveBrand } = useContext(CarsContext);
   return (
     <>
       <Ul>

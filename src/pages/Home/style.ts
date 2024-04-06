@@ -12,7 +12,7 @@ export const HomeMain = styled.main`
   }
 `;
 
-export const ProductInfo = styled.main`
+export const CarInfo = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +20,7 @@ export const ProductInfo = styled.main`
   width: 100%;
   margin: 20px 0;
 
-  .productInfoHeader {
+  .carInfoHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;

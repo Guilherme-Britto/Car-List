@@ -1,16 +1,16 @@
 import { useContext } from 'react';
-import { ProductsContext } from '../../providers/ProductsContext/ProductsContext';
+import { CarsContext } from '../../providers/CarsContext/CarsContext';
 import { useOutclick } from '../../hooks/useOutclick';
 
-export const ExpandProductInfo = () => {
-  const { SetExpandInfoModal, expandInfo } = useContext(ProductsContext);
+export const ExpandCarInfo = () => {
+  const { SetExpandInfoModal, expandInfo } = useContext(CarsContext);
 
   const ref = useOutclick<HTMLFormElement>(() => SetExpandInfoModal(false));
 
   return (
     <form ref={ref}>
       <div className='modalHeader'>
-        <h2 className='weigth700 '>Detalhes do Produto</h2>
+        <h2 className='weigth700 '>Detalhes do Carro</h2>
         <button
           className='colorgrey0 weigth400'
           type='button'

@@ -2,19 +2,16 @@ import { SubmitButton } from '../../styles/styles';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Input from '../Input';
 import { useContext } from 'react';
-import { ProductsContext } from '../../providers/ProductsContext/ProductsContext';
-import { ICreateProductFormValues } from '../../providers/ProductsContext/@types';
+import { CarsContext } from '../../providers/CarsContext/CarsContext';
+import { ICreateCarFormValues } from '../../providers/CarsContext/@types';
 import { useOutclick } from '../../hooks/useOutclick';
 
-export const FormCreateProduct = () => {
-  const { register, handleSubmit } = useForm<ICreateProductFormValues>();
+export const FormCreateCar = () => {
+  const { register, handleSubmit } = useForm<ICreateCarFormValues>();
 
-  const { productsCreate, SetCreatingProductModal } =
-    useContext(ProductsContext);
+  const { carsCreate, SetCreatingCarModal } = useContext(CarsContext);
 
-  const submit: SubmitHandler<ICreateProductFormValues> = (formData) => {
-    console.log(formData);
-
+  const submit: SubmitHandler<ICreateCarFormValues> = (formData) => {
     if (
       formData.ano &&
       formData.brand &&
@@ -27,15 +24,12 @@ export const FormCreateProduct = () => {
     ) {
       if (typeof formData.brand === 'string') {
         const brandNumber = parseFloat(formData.brand);
-        console.log(brandNumber);
-        productsCreate({ ...formData, brand: brandNumber });
+        carsCreate({ ...formData, brand: brandNumber });
       }
     }
   };
 
-  const ref = useOutclick<HTMLFormElement>(() =>
-    SetCreatingProductModal(false)
-  );
+  const ref = useOutclick<HTMLFormElement>(() => SetCreatingCarModal(false));
 
   const anos = Array.from(
     { length: new Date().getFullYear() - 2005 + 1 },
@@ -45,11 +39,11 @@ export const FormCreateProduct = () => {
   return (
     <form ref={ref} onSubmit={handleSubmit(submit)}>
       <div className='modalHeader'>
-        <h2 className='weigth700 '>Cadastrar Produto</h2>
+        <h2 className='weigth700 '>Cadastrar Carro</h2>
         <button
           className='colorgrey1 weigth600 closeButton'
           type='button'
-          onClick={() => SetCreatingProductModal(false)}
+          onClick={() => SetCreatingCarModal(false)}
         >
           X
         </button>
@@ -122,7 +116,7 @@ export const FormCreateProduct = () => {
       />
 
       <SubmitButton className='submitButtonCreate' type='submit'>
-        Cadastrar Produto
+        Cadastrar Carro
       </SubmitButton>
     </form>
   );
